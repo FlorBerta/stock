@@ -1,12 +1,7 @@
 {
-  "name": "Stock Conin - Cda. Gomez",
   "short_name": "StockConin",
-  "start_url": "index.html",
-  "display": "standalone",
-  "background_color": "#fdfdfd",
-  "theme_color": "#db4938",
-  "orientation": "portrait-primary",
-  "scope": "/",
+  "name": "StockConin- CDA GMZ",
+  "background_color": "#B71C1C",
   "icons": [
     {
       "src": "/images/icons/icon-72x72.png",
@@ -40,6 +35,8 @@
       "src": "/images/icons/icon-512x512.png",
       "type": "image/png", "sizes": "512x512"
     }
-  ]
+	     	
+  ],
+  "start_url": "/index.html",
+  "display": "standalone"
 }
-
