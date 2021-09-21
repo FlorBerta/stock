@@ -7,20 +7,28 @@ const assets = [
   "/images/conin1.png",
   "/images/conin2.png",
 
-]
+];
 
-self.addEventListener("install", installEvent => {
-  installEvent.waitUntil(
-    caches.open(staticStockConin).then(cache => {
-      cache.addAll(assets)
-    })
-  )
-})
+self.addEventListener('install', function(event) 
+{
+  event.waitUntil
+  (
+    caches.open(cacheActual).then(function(cache) 
+       {
+        return cache.addAll(staticcStockConin);
+       })
+  );
+});  
+    
 
-self.addEventListener("fetch", fetchEvent => {
-  fetchEvent.respondWith(
-    caches.match(fetchEvent.request).then(res => {
-      return res || fetch(fetchEvent.request);
-    })
+self.addEventListener('fetch', function (event) {
+  event.respondWith(
+    caches.match(event.request)
+      .then(function (response) {
+        if (response) {
+          return response;
+        }
+        return fetch(event.request);
+      })
   );
 });
